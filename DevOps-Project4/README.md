@@ -1,7 +1,7 @@
 ### DevSecOps Project Diagram:
 <img width="1280" height="720" alt="Netflix CI CD DevSecOps Project Jenkins   monitoring" src="https://github.com/user-attachments/assets/1799a2b5-8e6b-496a-b25a-fdbcd903e577" />
 
-
+ 
 <div align="center">
   <a href="http://netflix-clone-with-tmdb-using-react-mui.vercel.app/">
     <img src="./public/assets/netflix-logo.png" alt="Logo" width="100" height="32">
