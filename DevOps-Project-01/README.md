@@ -2,7 +2,7 @@
 <img width="813" height="757" alt="Deploying a 2048 Game on AWS EKS Fargate with Load Balancing" src="https://github.com/user-attachments/assets/a59e7b40-235e-4217-8fa7-756aacf8ad28" />
 
 
-# AWS EKS 
+# AWS EKS  
 
 ## Introduction
 
