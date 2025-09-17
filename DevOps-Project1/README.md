@@ -24,6 +24,6 @@
 4. [Deploying Applications on EKS](#deploying-applications-on-eks)
    - 4.1 [Containerizing Applications with Docker](#containerizing-applications-with-docker)
    - 4.2 [Writing Kubernetes Deployment YAMLs](#writing-kubernetes-deployment-yamls)
-   - 4.3 [Deploying Applications to EKS: Step-by-step Guide](#deploying-applications-to-eks-step-by-step-guide)
+   - 4.3 [Deploying Applications to EKS: Step-by-step Guide](#deploying-applications-to-eks-step-by-step-guide) 
 
 
