@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 <img width="772" height="430" alt="Netflix CI CD DevSecOps Project GitHub Actions" src="https://github.com/user-attachments/assets/fa317894-c461-4b22-8ea6-bbe652a99670" />
 
 
