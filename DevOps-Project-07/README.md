@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 <img width="596" height="344" alt="YouTube App Clone with DevSecOps and Jenkins Shared Library" src="https://github.com/user-attachments/assets/85dc2662-8057-49b1-8c50-7427c55172ae" />
 
 
