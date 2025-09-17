@@ -5,4 +5,4 @@
 
 
 #BLOG LINK
-https://mrcloudbook.com/deploying-super-mario-on-kubernetes/ 
+https://mrcloudbook.com/deploying-super-mario-on-kubernetes/  
