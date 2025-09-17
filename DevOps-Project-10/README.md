@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 <img width="565" height="320" alt="2048 Game DevSecOps Approach- Deploying on Docker and Kubernetes with Jenkins CI CD" src="https://github.com/user-attachments/assets/9f376559-670d-417c-8295-f5d49f977135" />
 
 
