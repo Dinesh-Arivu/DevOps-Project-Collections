@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 <img width="1280" height="720" alt="Netflix CI CD DevSecOps Project Jenkins   monitoring" src="https://github.com/user-attachments/assets/1799a2b5-8e6b-496a-b25a-fdbcd903e577" />
 
  
