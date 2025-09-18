@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 <img width="471" height="309" alt="Myntra App Clone DevSecOps Project Deploying On AWS EKS With GitHub Actions" src="https://github.com/user-attachments/assets/24c7533b-942e-4f6c-8dfb-e27727627b65" />
 
 ---
