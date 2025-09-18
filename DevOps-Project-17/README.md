@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 <img width="566" height="321" alt="Candycrush Game DevSecOps Project Deploying On AWS EKS With GitHub Actions" src="https://github.com/user-attachments/assets/3d83719f-b881-4b86-80c2-fc0670f5ec63" />
 
 
