@@ -1,4 +1,4 @@
-# Python Flask - Demo Web Application
+# Python Flask - Demo Web Application 
 
 ### DevSecOps Project Diagram:
 <img width="556" height="314" alt="PYTHON WebApp Deployment with DevSecOps CI CD Pipeline using Jenkins" src="https://github.com/user-attachments/assets/e91e378d-bbee-4826-8ad2-0c2bbe0308f2" />
