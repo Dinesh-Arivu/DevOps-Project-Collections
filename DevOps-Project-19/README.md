@@ -1,3 +1,6 @@
+### DevSecOps Project Diagram:
+<img width="605" height="302" alt="OpenAI Chatbot UI Deployment- A DevSecOps Approach with Terraform and Jenkins CI CD" src="https://github.com/user-attachments/assets/e8711555-e0b6-443c-b24b-727da8432873" />
+
 # Chatbot UI
 
 Chatbot UI is an advanced chatbot kit for OpenAI's chat models built on top of [Chatbot UI Lite](https://github.com/mckaywrigley/chatbot-ui-lite) using Next.js, TypeScript, and Tailwind CSS.
