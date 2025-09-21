@@ -1,4 +1,4 @@
-# DevOps Project : End to End Deployment of FullStack Blogging Application
+# DevOps Project : End to End Deployment of FullStack Blogging Application 
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/0*LdTGlxSTQHnTl9uy.gif)
 
