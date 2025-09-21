@@ -1,0 +1,133 @@
+pipeline {
+    agent any
+
+    tools {
+        maven "maven3"
+        jdk "jdk17"
+    }
+
+    environment {
+        SCANNER_HOME = tool "sonar-scanner"
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Dinesh-Arivu/Spring-Boot-Shopping-Cart-Web-App-Deployment-DevSecOps-Approach-with-Jenkins-and-Kubernetes.git'
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                sh "mvn clean compile"
+            }
+        }
+
+        stage('Run Unit Tests') {
+            steps {
+                 sh "mvn test -DskipTests=true"
+            }
+        }            
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('sonar-server') {
+                    sh '''
+                        $SCANNER_HOME/bin/sonar-scanner \
+                        -Dsonar.projectKey=EKART \
+                        -Dsonar.projectName=EKART \
+                        -Dsonar.java.binaries=target/classes
+                    '''
+                }
+            }
+        }
+
+        stage("quality gate"){
+           steps {
+                 script {
+                     waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token' 
+                 }
+            }
+        } 
+
+        stage('OWASP Dependency Check') {
+            steps {
+                dependencyCheck additionalArguments: ' --scan ./', odcInstallation: 'DP-Check'
+            }
+            post {
+                always {
+                    dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+                }
+            }
+        }
+
+        stage('Build Jar') {
+            steps {
+                sh "mvn package -DskipTests"
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
+            }
+        }
+
+        stage('Deploy to Nexus') {
+            steps {
+                echo "Skipping Nexus deployment (no Nexus configured)."
+            }
+        }
+
+        stage('Build & Tag Docker Image') {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
+                        sh "docker build -t dinesh1097/ekart:${BUILD_NUMBER} -t dinesh1097/ekart:latest -f docker/Dockerfile ."
+                    }
+                }
+            }
+        }
+
+        stage('Trivy Scan') {
+            steps {
+                sh "trivy image dinesh1097/ekart:latest --exit-code 0 --format table > trivy-report.txt"
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'trivy-report.txt'
+                }
+            }
+        }
+
+        stage('Push Docker Image to DockerHub') {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
+                        sh "docker push dinesh1097/ekart:latest"
+                        sh "docker push dinesh1097/ekart:${BUILD_NUMBER}"
+                    }
+                }
+            }
+        }
+
+        stage('Deploy to kubernets'){
+            steps{
+                script{
+                    dir('K8S') {
+                        withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
+                                sh 'kubectl apply -f deployment.yml'
+                        }
+                    }
+                }
+            }
+        }
+
+    post {
+        always {
+            echo "✅ Pipeline completed. Check reports for details."
+        }
+        failure {
+            echo "❌ Pipeline failed. Please check logs."
+        }
+    }
+}
