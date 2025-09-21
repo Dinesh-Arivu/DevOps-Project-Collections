@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 
 ![1703966387251](image/README/1703966387251.png)
 
