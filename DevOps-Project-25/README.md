@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 <img width="608" height="358" alt="Uptime-Kuma with Real-Time Downtime Alerts in CI CD   DevSecOps" src="https://github.com/user-attachments/assets/07c4787c-2b57-42ee-9c4c-fb7dadba8b5f" />
 
 # Uptime-Kuma Monitoring with CI/CD & Real-Time Call Alerts
