@@ -1,4 +1,4 @@
-### DevSecOps Project Diagram:
+### DevSecOps Project Diagram: 
 <img width="510" height="272" alt="Spring Boot Shopping Cart Web App Deployment- DevSecOps Approach with Jenkins and Kubernetes" src="https://github.com/user-attachments/assets/1c8d7d33-08a5-4049-b8be-247c17cabd2f" />
 
 # Spring Boot Shopping Cart Web App
