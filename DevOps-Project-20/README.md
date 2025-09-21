@@ -1,4 +1,8 @@
-# Build and Deploy a Modern YouTube Clone Application in React JS with Material UI 5
+# GitLab CI/CD DevSecOps – YouTube App Clone
+<img width="589" height="327" alt="GitLab CI CD DevSecOps – YouTube App Clone" src="https://github.com/user-attachments/assets/8246ec23-b3d3-4ecd-98ff-9b1c61013d4c" />
+
+
+## Build and Deploy a Modern YouTube Clone Application in React JS with Material UI 5
 
 ![YouTube](https://i.ibb.co/4R5RkmW/Thumbnail-5.png)
 
